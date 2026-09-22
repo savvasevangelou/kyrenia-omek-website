@@ -76,7 +76,8 @@
   .icon-btn svg{width:18px;height:18px}
 
   /* ---------- Header ---------- */
-  header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;border-bottom:1px solid var(--line)}
+  header.site::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px)}
   header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:76px}
   .brand{display:flex;align-items:center;gap:.8rem}
   .crest{width:52px;height:52px;flex:none;object-fit:contain}
