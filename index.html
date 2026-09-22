@@ -92,9 +92,12 @@
   .nav-cta{margin-left:.5rem}
   .menu-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;padding:.5rem;cursor:pointer;color:var(--ink)}
   .menu-toggle svg{width:22px;height:22px;display:block}
+  .menu-toggle .icon-close{display:none}
+  .menu-toggle[aria-expanded="true"] .icon-bars{display:none}
+  .menu-toggle[aria-expanded="true"] .icon-close{display:block}
 
   /* ---------- Hero ---------- */
-  .hero{position:relative;min-height:clamp(480px,74vh,660px);display:flex;align-items:center;color:#eaf2fa;overflow:hidden;isolation:isolate;background:#0d3151}
+  .hero{position:relative;min-height:clamp(360px,58vh,520px);display:flex;align-items:center;color:#eaf2fa;overflow:hidden;isolation:isolate;background:#0d3151}
   .hero-slides{position:absolute;inset:0;z-index:0}
   .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;background-size:cover;background-position:center;background-repeat:no-repeat}
   .hero-slide.is-active{opacity:1}
@@ -210,12 +213,12 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width:900px){
-    nav.main{position:fixed;inset:0 0 0 auto;width:min(320px,82vw);background:var(--bg);flex-direction:column;align-items:stretch;gap:.2rem;padding:5rem 1.3rem 2rem;box-shadow:-20px 0 50px -20px rgba(0,0,0,.4);transform:translateX(100%);transition:transform .28s ease;border-left:1px solid var(--line)}
+    nav.main{position:fixed;inset:0 0 0 auto;z-index:41;width:min(320px,82vw);background:var(--bg);flex-direction:column;align-items:stretch;gap:.2rem;padding:5rem 1.3rem 2rem;box-shadow:-20px 0 50px -20px rgba(0,0,0,.4);transform:translateX(100%);transition:transform .28s ease;border-left:1px solid var(--line);overflow-y:auto}
     nav.main.open{transform:translateX(0)}
-    nav.main a{padding:.85rem .6rem;border-bottom:1px solid var(--line);border-radius:0}
+    nav.main a{padding:1rem .6rem;border-bottom:1px solid var(--line);border-radius:0;font-size:1.02rem}
     nav.main a::after{display:none}
-    .nav-cta{margin:1rem 0 0}
-    .menu-toggle{display:inline-flex}
+    .nav-cta{margin:1.2rem 0 0;justify-content:center;width:100%}
+    .menu-toggle{display:inline-flex;position:relative;z-index:51}
     .hero-grid{grid-template-columns:1fr;gap:1.5rem}
     .hero-art{display:none}
     .about-grid{grid-template-columns:1fr}
@@ -234,7 +237,7 @@
     .util-contact .u-mail{display:none}
     .brand-text .b1{font-size:1.05rem}
     .hero-arrow{display:none}
-    .hero{min-height:430px}
+    .hero{min-height:320px}
     .hero-caption{display:none}
   }
   @media (prefers-reduced-motion:reduce){
@@ -291,7 +294,8 @@
     </nav>
 
     <button class="menu-toggle" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
 </header>
