@@ -1,12 +1,15 @@
-# Kyrenia Omek Website
+# ΟΜΕΚ Κερύνειας
 
-Static website for Kyrenia Omek, hosted with GitHub Pages.
+Website for the Ομοσπονδία Συνδέσμων Γονέων Μέσης Εκπαίδευσης Επαρχίας Κερύνειας
+(Federation of Secondary Education Parents' Associations of Kyrenia District),
+hosted as a static site with GitHub Pages. Bilingual: Greek / English.
 
 **Live site:** https://savvasevangelou.github.io/kyrenia-omek-website/
+**Contact:** omkeryneias@gmail.com
 
 ## Structure
 
-- `index.html` — main page
+- `index.html` — the whole site (single page)
 - `kyrenia-castle.jpg`, `kyrenia-limani.jpg` — images used on the page
 
 ## Updating the site
