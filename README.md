@@ -10,7 +10,9 @@ hosted as a static site with GitHub Pages. Bilingual: Greek / English.
 ## Structure
 
 - `index.html` — the whole site (single page)
-- `kyrenia-castle.jpg`, `kyrenia-limani.jpg` — images used on the page
+- `kyrenia-castle.jpg`, `kyrenia-limani.jpg` — hero photos
+- `crest-header.png`, `crest-footer.png` — federation crest (dark/light variants), also used as the favicon
+- `map.jpg` — map graphic used in the About section
 
 ## Updating the site
 
